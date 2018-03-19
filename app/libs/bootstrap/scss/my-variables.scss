@@ -1,6 +1,6 @@
 $default-font: "Montserrat-Medium", sans-serif;
 $extrabold-font: "Montserrat-ExtraBold", sans-serif;
-$bold-font: "Montserrat-Bold", sans-serif;
+$bold-font: "algerian", sans-serif;
 $light-font: 'Montserrat-Light', san-serif;
 $semi-font: 'Montserrat-SemiBold', san-serif;
 $black-font: 'Montserrat-Black', san-serif;
@@ -12,7 +12,9 @@ $thin-font: 'Montserrat-Thin', san-serif;
 $theme-colors: (
   "secondary": #dc3545,
   "dark": #182129,
-  "primary": #3d65b8,
+  "primary": #345fa4,
   "light": #f2f2f2,
+  "info": #00a86b
 );   
 $link-hover-decoration: none;
+$border-color: #dc3545;
