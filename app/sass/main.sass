@@ -14,6 +14,7 @@ html, body
 		font-family: PlayfairDisplay-BlackItalic
 		letter-spacing: 2px
 		color: #f2f2f2
+		box-sizing: border-box
 		overflow-x: hidden
 		input, textarea
 			outline: none
@@ -28,155 +29,58 @@ html, body
 	content: ""
 header
 	height: 100vh
-	width: 900px
-	+push-auto
+	width: 100%
 	position: relative
 	text-align: center
+	background-image: url(../img/5-salut.jpg)
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: 50% 50%
 	.navbar
 		position: absolute
 		width: 100%
-		height: 80px
 		.navbar-brand h1
 			position: absolute
-			top: 15px
+			top: 0
 			z-index: 11
-			color: $red
+			color: $light
 			font-weight: 600
 			+ts(3px,2px,0,#222)
 			span
 				color: $light
 				font-size: 25px
-		
-.bg-top
-	width: 100%
-	min-height: 500px
-	background-color: #008bfd
-	background-image: url(../img/bg-top.png)
-	background-repeat: no-repeat
-	background-position: bottom center
-	+ts(1px,2px,0,#222)
-.layer
-	position: absolute
-	width: 100%
-	height: 80px
-	background-color: $info
-	opacity: .2
-	top: 0
-	bottom: 0
-	left: 0
-	right: 0
-	z-index: 10
-.cb-slideshow
-	position: relative
-	width: 100%
-	height: 80px
-	top: 0px
-	overflow: hidden
-	margin: 0
-	left: 0px
-	z-index: 0
-	&:after
-		position: absolute
-		width: 100%
-		height: 80px
-		top: 0px
-		overflow: hidden
-		left: 0px
-		z-index: 0
-		content: ''
-		background: transparent url(../img/pattern.png) repeat top left
-	li
-		list-style: none
-		span
-			width: 100%
-			height: 80px
-			position: absolute
-			top: 0px
-			left: 0px
-			color: transparent
-			background-size: cover
-			background-position: 50% 50%
-			background-repeat: none
-			opacity: 0
-			z-index: 0
-			-webkit-backface-visibility: hidden
-			
-		
-			
-		&:nth-child(1) span
-			background-image: url(../img/3-salut.jpg)
-			animation: imageAnimation 36s linear infinite 0s
-		&:nth-child(2) span
-			background-image: url(../img/1-salut.jpg)
-			animation: imageAnimation-2 36s linear infinite 0s
-			animation-delay: 6s
-		&:nth-child(3) span
-			background-image: url(../img/4-salut.jpg)
-			animation: imageAnimation 36s linear infinite 0s
-			animation-delay: 12s
-		&:nth-child(4) span
-			background-image: url(../img/3-salut.jpg)
-			animation: imageAnimation-2 36s linear infinite 0s
-			animation-delay: 18s
-		&:nth-child(5) span
-			background-image: url(../img/1-salut.jpg)
-			animation: imageAnimation 36s linear infinite 0s
-			animation-delay: 24s
-		&:nth-child(6) span
-			background-image: url(../img/4-salut.jpg)
-			animation: imageAnimation-2 36s linear infinite 0s
-			animation-delay: 30s
-	 
+				margin-left: 20px
+#hexagon
+  width: 100px
+  height: 55px
+  background: $red
+  position: absolute
+  padding: 20px 
+  margin: 20px
+  top: 25px
+  h1
+		padding-bottom: 20px
+  &:before
+    content: ""
+    position: absolute
+    top: -25px
+    left: 0
+    width: 0
+    height: 0
+    border-left: 50px solid transparent
+    border-right: 50px solid transparent
+    border-bottom: 25px solid $red
+  &:after
+    content: ""
+    position: absolute
+    bottom: -25px
+    left: 0
+    width: 0
+    height: 0
+    border-left: 50px solid transparent
+    border-right: 50px solid transparent
+    border-top: 25px solid $red		
 
-
-@keyframes imageAnimation
-	0%
-		opacity: 0
-		animation-timing-function: ease-in
-		transform: scale(1)
-		
-	8%
-		opacity: 1
-		
-		animation-timing-function: ease-out
-
-	17%
-		opacity: 1
-		 
-
-	25%
-		opacity: 0
-		transform: scale(1.1)
-
-	100%
-		opacity: 0
-
-@keyframes imageAnimation-2
-	0%
-		opacity: 0
-		animation-timing-function: ease-in
-		transform: scale(1)
-
-	8%
-		opacity: 1
-		animation-timing-function: ease-out
-
-	17%
-		opacity: 1
-
-	25%
-		opacity: 0
-		transform: scale(1.1) 
-
-	100%
-		opacity: 0
-
-.no-cssanimations .cb-slideshow li span
-	opacity: 1
-
-
+	
 
 @import "media" // Always at the end
