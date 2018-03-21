@@ -11,7 +11,9 @@ html, body
 		font-size: 16px
 		min-width: 320px
 		position: relative
-		font-family: $bold-font
+		font-family: PlayfairDisplay-BlackItalic
+		letter-spacing: 2px
+		color: #f2f2f2
 		overflow-x: hidden
 		input, textarea
 			outline: none
@@ -26,52 +28,42 @@ html, body
 	content: ""
 header
 	height: 100vh
-	width: 100%
+	width: 900px
+	+push-auto
 	position: relative
 	text-align: center
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: 50% 50%
-	h2
+	.navbar
 		position: absolute
-		top: 20px
-		left: 0
-		right: 0
-		text-align: center
-		opacity: 1
-		z-index: 9999
-		padding: 15px
-		font-weight: 600
-		letter-spacing: 7.5px
-		color: $red
-		font-family: $semi-font
-		+text-shadow(1px 1px 0 #222)
-	p
-		position: absolute
-		top: 35%
-		left: 0
-		right: 0
-		opacity: 1
-		z-index: 9999
-		padding: 15px
-		font-weight: 600
-		+push-auto
-		letter-spacing: 4.5px
-		font-size: 25px
-		max-width: 800px
-		color: $primary
-		font-family: $medium-font
-		+text-shadow(1px 1px 0 #222)
-		span
-			font-size: 40px
+		width: 100%
+		height: 80px
+		.navbar-brand h1
+			position: absolute
+			top: 15px
+			z-index: 11
 			color: $red
+			font-weight: 600
+			+ts(3px,2px,0,#222)
+			span
+				color: $light
+				font-size: 25px
 		
+.bg-top
+	width: 100%
+	min-height: 500px
+	background-color: #008bfd
+	background-image: url(../img/bg-top.png)
+	background-repeat: no-repeat
+	background-position: bottom center
+	+ts(1px,2px,0,#222)
 .layer
 	position: absolute
 	width: 100%
-	height: 100%
-	background-color: #fff
-	opacity: .8
+	height: 80px
+	background-color: $info
+	opacity: .2
 	top: 0
 	bottom: 0
 	left: 0
@@ -80,15 +72,16 @@ header
 .cb-slideshow
 	position: relative
 	width: 100%
-	height: 100%
+	height: 80px
 	top: 0px
 	overflow: hidden
+	margin: 0
 	left: 0px
 	z-index: 0
 	&:after
 		position: absolute
 		width: 100%
-		height: 100%
+		height: 80px
 		top: 0px
 		overflow: hidden
 		left: 0px
@@ -99,7 +92,7 @@ header
 		list-style: none
 		span
 			width: 100%
-			height: 100%
+			height: 80px
 			position: absolute
 			top: 0px
 			left: 0px
@@ -184,37 +177,6 @@ header
 .no-cssanimations .cb-slideshow li span
 	opacity: 1
 
-section
-	font-family: $medium-font
-	text-align: center
-	padding: 30px 0 30px
-	h3
-		font-family: $semi-font
-		position: relative
-		margin-bottom: 52px
-		&:after
-			content: ""
-			display: block
-			position: absolute
-			width: 70px
-			height: 2px
-			background-color: $red
-			bottom: -19px
-			margin-left: -35px
-			left: 50%
-			z-index: -1
-		&:before
-			position: absolute
-			content: ""
-			display: block
-			width: 10px
-			height: 10px
-			background-color: #fff
-			border: 4px solid $primary
-			border-radius: 50%
-			padding: 1px
-			bottom: -17px
-			left: 50%
-			margin-left: -5px
+
 
 @import "media" // Always at the end
