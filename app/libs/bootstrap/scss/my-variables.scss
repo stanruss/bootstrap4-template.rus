@@ -14,7 +14,8 @@ $theme-colors: (
   "dark": #182129,
   "primary": #2b52d1,
   "light": #e2f7ff,
-  "info": #3a8af9
+  "info": #3a8af9,
+  "success": lighten(#01321f,10%)
 );   
 $link-hover-decoration: none;
 $border-color: #dc3545;
