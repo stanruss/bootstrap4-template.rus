@@ -30,12 +30,17 @@ html, body
 
 .navbar
 	position: relative
-	height: 100px
+	height: 135px
 	width: 100%
 	z-index: 13
+	p
+		margin-bottom: 0
+		margin-right: 40px
+		display: block
 	.navbar-brand h1
 		position: absolute
 		top: 0
+		display: block
 		z-index: 11
 		color: $light
 		font-weight: 600
@@ -116,7 +121,7 @@ header
   padding: 20px 
   margin: 20px
   display: block
-  top: 25px
+  top: 0
   z-index: 3
   h1
 		padding-bottom: 20px
@@ -159,16 +164,7 @@ header
 	top: 0px
 	right: 0
 	left: 0px
-	z-index: 0
-	&:after
-		position: absolute
-		width: 100%
-		height: 100%
-		top: 0px
-		left: 0px
-		z-index: 0
-		content: ''
-		background: transparent url(../img/pattern.png) repeat top left
+	z-index: 0		
 	li
 		list-style: none
 		span
@@ -258,6 +254,15 @@ header
 .no-cssanimations .cb-slideshow li span
 	opacity: 1
 .ask
+	position: relative
+	&:after
+		position: absolute
+		content: ""
+		height: 6px
+		z-index: 3
+		width: 100%
+		background-image: url(../img/bah_1.png)
+		background-repeat: repeat-x
 	h5
 		margin-bottom: 24px
 		font-family: $medium-font
@@ -379,10 +384,22 @@ header
 				display: block
 				float: left
 .answer
+	position: relative
+	&:after
+		position: absolute
+		content: ""
+		height: 50px
+		width: 100%
+		background-image: url(../img/s1_triangle.png)
+		background-repeat: no-repeat
+		background-position: bottom center
 	p
 		font-size: 18px
+		span
+			+ts(1px,0px,0,#222)
 	button
 		font-family: $medium-font
+
 .we
 	p
 		font-size: 14px
@@ -393,10 +410,22 @@ header
 		height: 60px
 		font-size: 30px
 .we-2
+	position: relative
+	&:before
+		position: absolute
+		content: ""
+		height: 6px
+		width: 100%
+		background-color: #db3141
+		top: -6px
+		background-image: url(../img/bah_2.png)
+		background-repeat: repeat-x
 	img
 		width: 210px
 	p
 		margin-top: 30px
 		font-family: $medium-font
 		font-size: 14px
+
+	
 @import "media" // Always at the end
