@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 });	
-
+var scroll = new SmoothScroll('a[href*="#"]');
 $(window).scroll(function() {
 	if($(window).scrollTop()>200) {
 		$('.fixed-top').addClass('menu-bg');
