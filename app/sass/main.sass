@@ -29,11 +29,8 @@ html, body
 	content: ""
 
 .navbar
-	position: absolute
-	left: 0
-	right: 0
-	top: 0
-	height: 80px
+	position: relative
+	height: 100px
 	width: 100%
 	z-index: 13
 	.navbar-brand h1
@@ -47,47 +44,53 @@ html, body
 			color: $light
 			font-size: 25px
 			margin-left: 20px
+
 .header-h1
-	position: relative
-	top: 30%
-	left: 0
-	right: 0
+	height: 100%
+	margin-top: 100px
 	max-width: 740px
-	+push-auto
-	z-index: 2
 	p
 		font-size: 20px
+		position: relative
 		+ts(3px,2px,0,#222)
 		text-align: center
 	a button
 		letter-spacing: 2px
-		position: absolute
-		left: 50%
-		margin-left: -88px
+		position: relative
+		display: block
+		+push-auto
 	img
-		position: absolute
-		right: 60px
-		bottom: -10px
+		position: relative
+		display: block
+		+push-auto
+		margin-top: 30px
+		width: auto
+		height: 250px
+		
 	.fa-arrow-down
 		position: relative
-		bottom: -220px
-		right: 100px
+		display: block
 		width: 30px
 		height: 30px
 		background-color: $red
 		font-size: 5px
 		border-radius: 30px
 		padding: 7px
+		left: 50%
+		margin-left: 27px
+		bottom: 20px
 	h1
-		+ts(3px,2px,0,#222)
+		+ts(1px,1px,0,#f2f2f2)
+		position: relative
 		color: $red
+		display: block
 		text-align: center
 		&:before
 			content: ""
 			width: 60px
 			height: 5px
 			opacity: .5
-			top: 50px
+			top: 25px
 			left: 0
 			position: absolute
 			background-color: #f2f2f2
@@ -96,17 +99,21 @@ html, body
 			width: 60px
 			height: 5px
 			opacity: .5
-			top: 50px
+			top: 25px
 			right: 0
 			position: absolute
 			background-color: #f2f2f2
+header
+	position: relative
+	overflow: hidden
 #hexagon
   width: 100px
   height: 55px
   background: $red
-  position: absolute
+  position: relative
   padding: 20px 
   margin: 20px
+  display: block
   top: 25px
   z-index: 3
   h1
@@ -141,15 +148,14 @@ html, body
 	bottom: 0
 	left: 0
 	right: 0
+	overflow: hidden
 	z-index: 1
 .cb-slideshow
-	position: relative
+	position: absolute
 	width: 100%
 	height: 100%
 	top: 0px
 	right: 0
-	bottom: 0
-	overflow: hidden
 	left: 0px
 	z-index: 0
 	&:after
@@ -157,7 +163,6 @@ html, body
 		width: 100%
 		height: 100%
 		top: 0px
-		overflow: hidden
 		left: 0px
 		z-index: 0
 		content: ''
