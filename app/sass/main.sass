@@ -261,13 +261,14 @@ header
 		height: 6px
 		z-index: 3
 		width: 100%
+		background-color: #db3141
 		background-image: url(../img/bah_1.png)
 		background-repeat: repeat-x
 	h5
 		margin-bottom: 24px
 		font-family: $medium-font
 		font-size: 17px
-		
+			
 .products
 	font-family: $medium-font
 	letter-spacing: .2px
@@ -428,9 +429,19 @@ header
 		margin-top: 30px
 		font-family: $medium-font
 		font-size: 14px
+footer
+	position: relative
+	&:before
+		position: absolute
+		content: ""
+		height: 6px
+		width: 100%
+		background-color: #db3141
+		top: -6px
+		background-image: url(../img/bah_3.png)
+		background-repeat: repeat-x
 
-
-.modal-body
+.modal-body, .footer-box
 	font-family: $medium-font
 	letter-spacing: .2px
 	font-size: 14px
@@ -438,5 +449,6 @@ header
 		float: left
 		margin-right: 20px
 		color: $red
-	
+
+
 @import "media" // Always at the end
